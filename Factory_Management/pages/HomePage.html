@@ -1,0 +1,63 @@
+<html>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="../js//encryptions.js"></script>
+  <script src="../js/CheckIfLogin.js"></script>
+
+  <link rel="stylesheet" href="../style/HomePage.scss" />
+  <link rel="stylesheet" href="../style/styles.scss" />
+
+  <body onload="checkIfLogin();countActions();">
+    <div id="container">
+      <header data-first-name>
+        <div class="header-inner homepage">
+          <span data-user-fullName></span>
+          <button onclick="logout()" class="btn btn-primary btn-sm">
+            LogOut
+          </button>
+        </div>
+
+        <h3>Factory Management</h3>
+      </header>
+
+      <div class="cards-wapper">
+        <div class="card">
+          <div class="card-body">
+            <a href="Employees.html">
+              <img src="../assets/employees.png" alt="Employee icon" />
+            </a>
+            <p class="card-text">Employees</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <a href="Departments.html">
+              <img src="../assets/departments.png" alt="Employee icon" />
+            </a>
+            <p class="card-text">Departments</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <a href="Shifts.html">
+              <img src="../assets/shifts.png" alt="Employee icon" />
+            </a>
+
+            <p class="card-text">Shifts Menus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

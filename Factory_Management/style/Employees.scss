@@ -1,0 +1,36 @@
+.topnav {
+  display: flex;
+  align-items: center;
+}
+.search-button {
+  margin-left: 5px;
+}
+.addShift-div {
+  display: flex;
+  justify-content: end;
+}
+ul {
+  padding: 12px;
+  & li {
+    list-style: none;
+  }
+}
+
+li.shiftLi:nth-child(n + 3) {
+  display: none;
+
+  &.show:nth-child(n + 3) {
+    display: block;
+  }
+}
+
+label.seeMore {
+  color: #f86843;
+  font-weight: 600;
+  font-style: oblique;
+  display: none;
+  cursor: pointer;
+}
+label.seeMore.showMe {
+  display: block;
+}

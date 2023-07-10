@@ -1,0 +1,47 @@
+<html>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="../js/EmployeeSearchResults.js"></script>
+  <script src="../js/CheckIfLogin.js"></script>
+  <script src="../js//encryptions.js"></script>
+  <link rel="stylesheet" href="../style/styles.scss" />
+
+  <body onload="getFilterdEmployees();checkIfLogin()">
+    <div class="container">
+      <header>
+        <div class="header-inner">
+          <span data-user-fullName></span>
+          <button onclick="logout()" class="btn btn-primary btn-sm">
+            LogOut
+          </button>
+        </div>
+      </header>
+      <h3>Search Employess</h3>
+      <br />
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Department</th>
+            <th scope="col">Start Work Year</th>
+            <th scope="col">Shifts</th>
+          </tr>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+      <button class="btn btn-primary" onclick="goBackToEmployee()">Back</button>
+    </div>
+  </body>
+</html>

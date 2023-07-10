@@ -1,0 +1,49 @@
+<html>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="../js/AddShiftToEmployee.js"></script>
+  <script src="../js//encryptions.js"></script>
+  <script src="../js/CheckIfLogin.js"></script>
+  <link rel="stylesheet" href="../style/styles.scss" />
+  <link rel="stylesheet" href="../style/AddShiftToEmployee.scss" />
+
+  <body onload="checkIfLogin();getShiftsToAdd()">
+    <div class="container-wrapper">
+      <div class="container" data-container>
+        <header>
+          <div class="header-inner">
+            <span data-user-fullName></span>
+            <button onclick="logout()" class="btn btn-primary btn-sm">
+              LogOut
+            </button>
+          </div>
+        </header>
+
+        <h3>Add Shift to Employee</h3>
+
+        <div class="shifts-wrapper" data-shifts-wrapper>
+          <select name="shifts" id="shifts" data-shifts-select></select>
+          <div class="btn-wrapper">
+            <button class="btn btn-primary" onclick="addShiftToEmplyoee()">
+              Add
+            </button>
+            <button onclick="goBackToEmpPage()" class="btn btn-outline-primary">
+              Back
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.already-registered {
+  background-color: gray;
+  text-decoration: line-through;
+}
+.shifts-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 16px;
+  .btn-wrapper {
+    margin-top: 10px;
+  }
+}

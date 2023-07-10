@@ -1,0 +1,61 @@
+<html>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+  />
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+    integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="../js/AddNewDepartment.js"></script>
+  <script src="../js/encryptions.js"></script>
+  <script src="../js/CheckIfLogin.js"></script>
+  <link rel="stylesheet" href="../style/styles.scss" />
+
+  <body onload="getAllManagers();checkIfLogin()">
+    <div class="container-wrapper">
+      <div class="container">
+        <header>
+          <div class="header-inner">
+            <span data-user-fullName></span>
+            <button onclick="logout()" class="btn btn-primary btn-sm">
+              LogOut
+            </button>
+          </div>
+        </header>
+        <h1>Add New Department</h1>
+
+        <div class="form-group">
+          <label for="id">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            data-name
+            placeholder="Enter Department Name"
+          />
+          <label for="manager">Manager</label><br />
+          <select name="manager" id="manager" data-manager-select></select>
+
+          <button
+            type="input"
+            class="btn btn-primary"
+            onclick="saveNewDepartment()"
+          >
+            Save
+          </button>
+        </div>
+        <button onclick="goBackToDepPage()" class="btn btn-outline-primary">
+          Back
+        </button>
+        <br />
+      </div>
+    </div>
+  </body>
+</html>
